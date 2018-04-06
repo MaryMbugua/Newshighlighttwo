@@ -38,7 +38,7 @@ def get_sources(category):
 
 def process_sources(sources_list):
     '''
-    functin that processes the news surces result and transform them to 
+    functin that processes the news sources result and transform them to 
     a list of objects
     args:
         sources_list- a list of dictionaries that contain
@@ -56,7 +56,7 @@ def process_sources(sources_list):
         language = sources_item.get('language')
         country = sources_item.get('country')
 
-        ##no if statement
+    
 
         if url:
             sources_object = Newssources(id,name,description,url,category,language,country)
@@ -86,7 +86,7 @@ def get_articles(category):
 
 def process_articles(news_list):
     '''
-    functin that processes the news result and transform them to 
+    function that processes the news result and transform them to 
     a list of objects
     args:
         news_list- a list of dictionaries that contain
