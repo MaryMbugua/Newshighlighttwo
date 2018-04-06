@@ -1,0 +1,2 @@
+MOVIE_API_KEY = 'AIzaSyCHQbEeO-hBdoDOOmcxklzb1qXWREJRy9s'
+SECRET_KEY = 'Ur0K78edtY£'
