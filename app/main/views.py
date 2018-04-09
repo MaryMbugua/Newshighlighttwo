@@ -8,11 +8,11 @@ from ..models import Newsarticle,Newssources
 @main.route('/')
 def index():
     '''
-    view root page function that rreturns the index page and its data
+    view root page function that returns the index page and its data
     '''
    #getting health news from various news sources
 
-    health_sources = get_sources('health')
+    health_sources = get_sources('general')
     print(health_sources)
     title = 'Home - Welcome to The best News Update Website Online'
     return render_template('index.html',title = title,healthsource = health_sources)

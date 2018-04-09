@@ -4,11 +4,12 @@ from .models import Newssources,Newsarticle
 #getting the api key
 api_key = None
 
-#getting the movie base url
+#getting the sources and articles url
 sources_url = None
+articles_url = None
 
 def configure_request(app):
-    global api_key,base_url
+    global api_key,sources_url,articles_url
     api_key = app.config['NEWS_API_KEY']
     sources_url = app.config['SOURCES_API_URL']
     articles_url = app.config['ARTICLES_API_URL']
@@ -19,12 +20,13 @@ def get_sources(category):
     '''
     function that gets the json response to our url request
     '''
-    get_sources_url = sources_url.format(category,api_key)
+    get_sources_url = sources_url.format(category, api_key)
+    print(get_sources_url)
 
     with urllib.request.urlopen(get_sources_url) as url:
         get_sources_data = url.read()
         get_sources_response = json.loads(get_sources_data)
-
+        # print(get_sources_response)
         sources_results = None
 
         if get_sources_response['sources']:
