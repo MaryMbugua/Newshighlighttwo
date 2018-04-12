@@ -1,33 +1,147 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        {% if title %}
-        <title>{{ title  }}</title>
-        {% else %}
-        <title> Welcome to The Best News Update Website Online </title>
-        {% endif %}
+{% extends 'base.html' %}
+{% import 'macros.html' as macro %}   
 
-    </head>
-    <body>
+<!-- styles block -->
+{% block styles %}
+{{ super() }}
+<link rel="stylesheet" href="{{url_for('static',filename='css/index.css')}}">
+{% endblock %}
+
+
+
+<!-- Content block -->
+{% block content %}
+
          <!-- Health news section  -->
-         <h3> Health News</h3>
+         <h3> Health</h3>
          <ul>
             {% for healthsource in healthsource %}
              
-                <li>{{healthsource.id}}</li>
-                <li>{{healthsource.name}}</li>
-                <li>{{healthsource.description}}</li>
-                <li>{{healthsource.country}}</li>
-                <li>{{healthsource.url}}</li>
+                {{healthsource.id}}
+                {{healthsource.name}}
+                {{healthsource.description}}
+                {{healthsource.country}}
+                    {{healthsource.url}}
 
             {% endfor %}
         </ul>
+        
+    
 
+<div class="jumbotron you">
+        <!-- Health news section  -->
+<h3> Health</h3>
+<ul>
+   {% for healthsource in healthsource %}
+    
+       {{healthsource.id}}
+       {{healthsource.name}}
+       {{healthsource.description}}
+       {{healthsource.country}}
+           {{healthsource.url}}
 
+   {% endfor %}
+</ul>
+        <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a></p>
+</div>
 
+<div class="jumbotron you">
+    <!-- Health news section  -->
+<h3> Sports</h3>
+<ul>
+{% for healthsource in healthsource %}
 
-    </body>
-</html>
+   {{healthsource.id}}
+   {{healthsource.name}}
+   {{healthsource.description}}
+   {{healthsource.country}}
+       {{healthsource.url}}
+
+{% endfor %}
+</ul>
+    <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a></p>
+</div>
+<div class="jumbotron you">
+    <!-- Health news section  -->
+<h3> Science</h3>
+<ul>
+{% for healthsource in healthsource %}
+
+   {{healthsource.id}}
+   {{healthsource.name}}
+   {{healthsource.description}}
+   {{healthsource.country}}
+       {{healthsource.url}}
+
+{% endfor %}
+</ul>
+    <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a></p>
+</div>
+<div class="jumbotron you">
+    <!-- Health news section  -->
+<h3>  Entertainment</h3>
+<ul>
+{% for healthsource in healthsource %}
+
+   {{healthsource.id}}
+   {{healthsource.name}}
+   {{healthsource.description}}
+   {{healthsource.country}}
+       {{healthsource.url}}
+
+{% endfor %}
+</ul>
+    <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a></p>
+</div>
+<div class="jumbotron you">
+    <!-- Health news section  -->
+<h3>  General</h3>
+<ul>
+{% for healthsource in healthsource %}
+
+   {{healthsource.id}}
+   {{healthsource.name}}
+   {{healthsource.description}}
+   {{healthsource.country}}
+       {{healthsource.url}}
+
+{% endfor %}
+</ul>
+ 
+<div class="jumbotron you">
+        <!-- Health news section  -->
+<h3> Business</h3>
+<ul>
+   {% for healthsource in healthsource %}
+    
+       {{healthsource.id}}
+       {{healthsource.name}}
+       {{healthsource.description}}
+       {{healthsource.country}}
+           {{healthsource.url}}
+
+   {% endfor %}
+</ul>
+        <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a></p>
+</div>
+
+<div class="jumbotron you">
+    <!-- Health news section  -->
+<h3> Health</h3>
+<ul>
+{% for healthsource in healthsource %}
+
+   {{healthsource.id}}
+   {{healthsource.name}}
+   {{healthsource.description}}
+   {{healthsource.country}}
+       {{healthsource.url}}
+
+{% endfor %}
+</ul>
+    <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a></p>
+</div>
+
+{% endblock %}
+
+    
