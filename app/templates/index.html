@@ -12,21 +12,7 @@
 <!-- Content block -->
 {% block content %}
 
-         <!-- Health news section  -->
-         <h3> Health</h3>
-         <ul>
-            {% for healthsource in healthsource %}
-             
-                {{healthsource.id}}
-                {{healthsource.name}}
-                {{healthsource.description}}
-                {{healthsource.country}}
-                    {{healthsource.url}}
-
-            {% endfor %}
-        </ul>
         
-    
 
 <div class="jumbotron you">
         <!-- Health news section  -->
@@ -93,55 +79,5 @@
 </ul>
     <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a></p>
 </div>
-<div class="jumbotron you">
-    <!-- Health news section  -->
-<h3>  General</h3>
-<ul>
-{% for healthsource in healthsource %}
 
-   {{healthsource.id}}
-   {{healthsource.name}}
-   {{healthsource.description}}
-   {{healthsource.country}}
-       {{healthsource.url}}
-
-{% endfor %}
-</ul>
- 
-<div class="jumbotron you">
-        <!-- Health news section  -->
-<h3> Business</h3>
-<ul>
-   {% for healthsource in healthsource %}
-    
-       {{healthsource.id}}
-       {{healthsource.name}}
-       {{healthsource.description}}
-       {{healthsource.country}}
-           {{healthsource.url}}
-
-   {% endfor %}
-</ul>
-        <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a></p>
-</div>
-
-<div class="jumbotron you">
-    <!-- Health news section  -->
-<h3> Health</h3>
-<ul>
-{% for healthsource in healthsource %}
-
-   {{healthsource.id}}
-   {{healthsource.name}}
-   {{healthsource.description}}
-   {{healthsource.country}}
-       {{healthsource.url}}
-
-{% endfor %}
-</ul>
-    <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a></p>
-</div>
-
-{% endblock %}
-
-    
+      {% endblock %}  
