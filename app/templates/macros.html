@@ -1,24 +1,28 @@
-{% macro displayMovieList(movie_list) %}
+{% macro displaySourcesList(sources_list) %}
 
-    {% for movie in movie_list %}
-        <div class="col-xs-12 col-sm-4 col-md-2 col-lg-2 movie-card">
-            <img src="{{ movie.poster }}" alt="{{ movie.title }} poster" class="img-responsive">
-            <li class="text-center">
-                <a href="/movie/{{movie.id}}">
-                    {{ movie.title|truncate(10)}}</a>
-            </li>
+    {% for source in sources_list %}
+
+    <div class="row">
+        <div class="col-sm-6 col-md-4">
+            <div class="thumbnail">
+          
+                <div class="caption">
+                  <h3>Thumbnail label</h3>
+                  <li role="separator" class="divider"></li>
+                  <li><a href="#">{{source.name}}</a></li>
+                  <li><a href="#">{{source.description}}</a></li>
+                  <li><a href="{{source.url}}">{{source.url}}</a></li>
+                  <li role="separator" class="divider"></li>        
+                  <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
+                </div>
+                
+            </div>
         </div>
+    </div>
+          
 
+        
     {% endfor %}
 
 {% endmacro %}
 
-<!-- Displaying reviews macro -->
-{% macro displayReviews(review_list) %}
-{% for review in review_list %}
-<div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 review-card">
-    <h2> {{ review.title}} </h2>
-    <p> {{ review.review | truncate(30) }}</p>
-</div>
-{% endfor %}
-{% endmacro %}

@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+{% import 'macros.html' as macro %}   
+
+<!-- styles block -->
+{% block styles %}
+{{ super() }}
+<link rel="stylesheet" href="{{url_for('static',filename='css/index.css')}}">
+{% endblock %}
+
+
+
+<!-- Content block -->
+{% block content %}
+
+   <!-- TITLE -->
+<div class="container">
+        
+                <div class="row">
+                        <div class="col-md-4 col-lg-3">
+                                     
+                        </div>
+                    
+                        <div class="col-md-4 col-lg-5 boxess">
+                                <h1>BUSINESS NEWS</h1>
+                        </div>
+                    
+                        <div class="col-md-4 col-lg-4">
+                                                 
+                        </div>
+                </div>
+            
+</div> 
+
+    <!-- Lists of Business News Sources -->
+    <div class="row">
+                <div class="col-sm-6 col-md-4">
+                  <div class="thumbnail">
+                    <img src="..." alt="...">
+                    <div class="caption">
+                      <h3>Thumbnail label</h3>
+                      <ul>  {{ macro.displaySourcesList(biznews)}}</ul>
+                      <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+{% endblock %}  
