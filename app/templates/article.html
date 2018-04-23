@@ -1,31 +1,22 @@
+{% extends 'base.html' %}
 {% import 'macros.html' as macro %}
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    
-    {% if title %}
-    <title>{{ title }}</title>
-    {% else %}
-    <title>News Article - {{ title}}</title>
-    {% endif %}
 
+<!-- styles block -->
+{% block styles %}
+{{ super() }}
+<link rel="stylesheet" href="{{url_for('static',filename='css/macros.css')}}">
+{% endblock %}
 
-</head>
-<body>
+{% block content %}
      <!-- Lists of Business News Sources -->
   <div class="container">
     <div class="jumbotron jumboff">
         {{ macro.displayNewsList(news)}}
 
     </div>
-    
-  </div>
-</body>
-</html>
+</div>
 
+{% endblock %}
 
 
