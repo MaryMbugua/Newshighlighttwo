@@ -16,7 +16,7 @@ def index():
 
 
 
-@main.route('/Business')
+@main.route('/Business/')
 def BusinessSources():
     '''
     view  page function that returns  business news from various news sources
